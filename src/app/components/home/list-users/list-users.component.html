@@ -1,0 +1,12 @@
+<div class="row py-4">
+   <button type="button"
+           class="btn btn-success d-inline-flex align-items-center justify-content-center py-2"
+           (click)="openModal()">
+      <i class="material-icons mr-4">picture_in_picture</i>Modal Default</button>
+</div>
+<modal-alert
+      [isOpenModal]="isOpenModal"
+      (close)="closeModal($event)"
+      *ngIf="isOpenModal">
+</modal-alert>
+

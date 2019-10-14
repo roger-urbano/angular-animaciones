@@ -1,0 +1,11 @@
+.sidebar {
+  width: 360px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all .3s ease;
+  &.show {
+    transform: translateX(0);
+  }
+}
