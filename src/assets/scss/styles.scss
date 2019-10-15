@@ -2,6 +2,14 @@
 @import "variables";
 @import "scroll";
 
+:host {
+  display: block;
+}
+
 body {
   font-family: Raleway;
+
+  &:host {
+    display: block;
+  }
 }

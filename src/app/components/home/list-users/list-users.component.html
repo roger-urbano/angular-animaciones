@@ -4,9 +4,18 @@
            (click)="openModal()">
       <i class="material-icons mr-4">picture_in_picture</i>Modal Default</button>
 </div>
-<modal-alert
-      [isOpenModal]="isOpenModal"
-      (close)="closeModal($event)"
-      *ngIf="isOpenModal">
+
+<modal-alert @starModal
+             [isOpenModal]="isOpenModal"
+             (close)="closeModal($event)"
+             *ngIf="isOpenModal">
 </modal-alert>
+
+
+<!--<modal-default @starModal-->
+<!--             (close)="closeModal($event)"-->
+<!--             *ngIf="isOpenModal">-->
+<!--</modal-default>-->
+
+
 
