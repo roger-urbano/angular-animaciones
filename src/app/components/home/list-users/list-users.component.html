@@ -5,17 +5,31 @@
       <i class="material-icons mr-4">picture_in_picture</i>Modal Default</button>
 </div>
 
-<modal-alert @starModal
-             [isOpenModal]="isOpenModal"
-             (close)="closeModal($event)"
-             *ngIf="isOpenModal">
-</modal-alert>
 
 
-<!--<modal-default @starModal-->
-<!--             (close)="closeModal($event)"-->
-<!--             *ngIf="isOpenModal">-->
-<!--</modal-default>-->
+<!--<modal-alert-->
+<!--    [isOpenModal]="isOpenModal"-->
+<!--    (close)="closeModal($event)"-->
+<!--    *ngIf="isOpenModal">-->
+<!--</modal-alert>-->
+
+
+<button (click)="changeColor()">Toggle</button>
+<hr>
+
+<div [@parentAnimation]="exp" class="box" *ngIf="exp">
+   <header>Hello</header>
+   <div [@childAnimation]="exp" *ngIf="exp">
+      one
+   </div>
+   <div [@childAnimation]="exp" *ngIf="exp">
+      two
+   </div>
+   <div [@childAnimation]="exp" *ngIf="exp">
+      three
+   </div>
+</div>
+
 
 
 
