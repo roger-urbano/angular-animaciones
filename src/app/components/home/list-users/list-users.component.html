@@ -5,15 +5,6 @@
       <i class="material-icons mr-4">picture_in_picture</i>Modal Default</button>
 </div>
 
-
-
-<!--<modal-alert-->
-<!--    [isOpenModal]="isOpenModal"-->
-<!--    (close)="closeModal($event)"-->
-<!--    *ngIf="isOpenModal">-->
-<!--</modal-alert>-->
-
-
 <button (click)="changeColor()">Toggle</button>
 <hr>
 
@@ -29,6 +20,15 @@
       three
    </div>
 </div>
+
+
+<modal-alert @parentAnimation
+    [isOpenModal]="isOpenModal"
+    (close)="closeModal($event)"
+    *ngIf="isOpenModal">
+</modal-alert>
+
+
 
 
 
