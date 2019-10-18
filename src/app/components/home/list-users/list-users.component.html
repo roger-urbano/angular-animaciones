@@ -7,11 +7,11 @@
 
 
 
-<!--<modal-alert-->
-<!--    [isOpenModal]="isOpenModal"-->
-<!--    (close)="closeModal($event)"-->
-<!--    *ngIf="isOpenModal">-->
-<!--</modal-alert>-->
+<modal-alert @parentAnimation
+    [isOpenModal]="isOpenModal"
+    (close)="closeModal($event)"
+    *ngIf="isOpenModal">
+</modal-alert>
 
 
 <button (click)="changeColor()">Toggle</button>

@@ -10,15 +10,18 @@ import {trigger, style, transition, animate, state} from '@angular/animations';
         trigger('animationModal', [
             state('void', style({
                 transform: 'translateY(100px)',
+                background: 'red'
             })),
             transition(':enter', [
-                animate('300ms cubic-bezier(0.35, 0, 0.25, 1)', style({
+                animate('800ms cubic-bezier(0.35, 0, 0.25, 1)', style({
                     transform: 'translateY(0)',
+                    background: 'blue'
                 }))
             ]),
             transition(':leave',
-                animate('300ms cubic-bezier(0.35, 0, 0.25, 1)', style({
+                animate('800ms cubic-bezier(0.35, 0, 0.25, 1)', style({
                     transform: 'translateY(-100px)',
+                    background: 'yellow'
                 })))
         ])
     ]
