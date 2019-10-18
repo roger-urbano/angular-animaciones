@@ -19,14 +19,29 @@ import {trigger, style, transition, animate, state} from '@angular/animations';
             ]),
             transition(':leave',
               animate('300ms cubic-bezier(0.35, 0, 0.25, 1)', style({
-                  transform: 'translateY(-100px)',
+                  transform: 'translateY(100px)',
                   opacity: 0
               })))
+        ]),
+        trigger('starOverlay', [
+            state('void', style({
+                opacity: 0
+            })),
+            transition(':enter', [
+                animate('800ms cubic-bezier(0.35, 0, 0.25, 1)', style({
+                    opacity: 1
+                }))
+            ]),
+            transition(':leave',
+                animate('800ms cubic-bezier(0.35, 0, 0.25, 1)', style({
+                    opacity: 0
+                })))
         ])
     ]
 })
 export class ModalDefaultComponent implements OnInit {
     @Output() public close: EventEmitter<boolean> = new EventEmitter();
+    @Input() public visibleModal: boolean;
 
     constructor() {
     }

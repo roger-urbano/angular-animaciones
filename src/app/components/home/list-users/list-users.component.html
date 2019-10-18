@@ -1,33 +1,54 @@
 <div class="row py-4">
    <button type="button"
            class="btn btn-success d-inline-flex align-items-center justify-content-center py-2"
-           (click)="openModal()">
-      <i class="material-icons mr-4">picture_in_picture</i>Modal Default</button>
+           (click)="openModaAlertl()">
+      <i class="material-icons mr-4">picture_in_picture</i>Modal Alert
+   </button>
 </div>
-
-<button (click)="changeColor()">Toggle</button>
-<hr>
-
-<div [@parentAnimation]="exp" class="box" *ngIf="exp">
-   <header>Hello</header>
-   <div [@childAnimation]="exp" *ngIf="exp">
-      one
-   </div>
-   <div [@childAnimation]="exp" *ngIf="exp">
-      two
-   </div>
-   <div [@childAnimation]="exp" *ngIf="exp">
-      three
-   </div>
+<div class="row">
+   <button type="button"
+           class="btn btn-warning d-inline-flex align-items-center justify-content-center py-2"
+           (click)="openModaForm()">
+      <i class="material-icons mr-4">picture_in_picture</i>Modal Form
+   </button>
 </div>
 
 
-<modal-alert @parentAnimation
-    [isOpenModal]="isOpenModal"
-    (close)="closeModal($event)"
-    *ngIf="isOpenModal">
+<modal-alert
+	[isModalAlert]="isModalAlert"
+    (close)="closeModal($event)">
 </modal-alert>
 
+<app-modal-form
+     [isModalForm]="isModalForm"
+     (close)="closeModal($event)">
+</app-modal-form>
+
+
+<div class="row mt-5">
+   <div class="col-12 mb-2"><button class="btn btn-danger" (click)="animationList()">Toogle animacionchild</button></div>
+   <ul [@parentAnimation]="exp" class="list-group box" *ngIf="exp">
+      <div [@childAnimation]="exp" *ngIf="exp" class="list-group-item disabled" aria-disabled="true">Cras justo odio</div>
+      <div [@childAnimation]="exp" *ngIf="exp" class="list-group-item">Dapibus ac facilisis in</div>
+      <div [@childAnimation]="exp" *ngIf="exp" class="list-group-item">Morbi leo risus</div>
+      <div [@childAnimation]="exp" *ngIf="exp" class="list-group-item">Porta ac consectetur ac</div>
+      <div [@childAnimation]="exp" *ngIf="exp" class="list-group-item">Vestibulum at eros</div>
+   </ul>
+
+</div>
+
+<!--<div [@parentAnimation]="exp"  class="box" *ngIf="exp">-->
+<!--   <header>Hello</header>-->
+<!--   <div [@childAnimation]="exp" *ngIf="exp">-->
+<!--      one-->
+<!--   </div>-->
+<!--   <div [@childAnimation]="exp" *ngIf="exp">-->
+<!--      two-->
+<!--   </div>-->
+<!--   <div [@childAnimation]="exp" *ngIf="exp">-->
+<!--      three-->
+<!--   </div>-->
+<!--</div>-->
 
 
 

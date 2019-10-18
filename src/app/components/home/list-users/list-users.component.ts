@@ -17,9 +17,9 @@ import {trigger, style, transition, animate, state, group, query, animateChild, 
                         // transform: 'translateY(0)',
                         opacity: 1
                     })),
-                    query('@childAnimation', stagger(100, [
+                    query('@childAnimation', stagger(200, [
                         animateChild()
-                    ]))
+                    ]), { optional: true })
                 ]),
             ]),
             transition(':leave', [
@@ -28,9 +28,9 @@ import {trigger, style, transition, animate, state, group, query, animateChild, 
                         // transform: 'translateY(-100px)',
                         opacity: 0
                     })),
-                    query('@childAnimation',[
+                    query('@childAnimation', [
                         animateChild()
-                    ])
+                    ], { optional: true })
                 ]),
             ]),
 
@@ -52,33 +52,39 @@ import {trigger, style, transition, animate, state, group, query, animateChild, 
                     transform: 'translateY(100px)'
                 }))
             ])
-        ])
+        ]),
     ]
 })
 
 export class ListUsersComponent implements OnInit {
 
-  public isOpenModal: boolean;
   public exp: boolean;
+  public isModalAlert: boolean;
+  public isModalForm: boolean;
+
 
   constructor() { }
 
   ngOnInit() {
       this.exp = false;
-      console.log(this.exp);
+      this.isModalAlert = false;
+      this.isModalForm = false;
   }
 
-  openModal() {
-      this.isOpenModal = true;
-      console.log("abrir modal");
-      console.log(this.isOpenModal);
+  openModaAlertl() {
+      this.isModalAlert = true;
   }
 
-   closeModal($event: boolean) {
-       this.isOpenModal = $event;
+   openModaForm() {
+        this.isModalForm = true;
    }
 
-    changeColor() {
+   closeModal($event: boolean) {
+       this.isModalAlert = $event;
+       this.isModalForm = $event;
+   }
+
+    animationList() {
       this.exp = !this.exp;
       console.log(this.exp);
     }

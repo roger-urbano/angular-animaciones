@@ -1,13 +1,15 @@
 <section class="container py-4">
+   
    <app-card (showEvent)="showSidebar($event)"></app-card>
    <app-sidebar [show]="show" (hideEvent)="closeSidebar($event)"></app-sidebar>
-   <app-list-users></app-list-users>
-
-</section>
-   <!--MODAL DE BOOTSTRAP-->
+   <!--ABRIR MODAL DE BOOTSTRAP-->
    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBootstrap">
       Modal bootstrap
    </button>
+   
+   <app-list-users></app-list-users>
+</section>
+
 
 <div class="modal fade" id="modalBootstrap" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
