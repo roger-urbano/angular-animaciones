@@ -1,0 +1,21 @@
+.wrap-doughnut-chart {
+	position: relative;
+}
+
+.text-doughnut-chart {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	strong {
+		font-size: 24px;
+		color: #0B8AE5;
+		display: block;
+	}
+
+	small {
+		font-size: 11px;
+		color: #0B8AE5;
+	}
+}
