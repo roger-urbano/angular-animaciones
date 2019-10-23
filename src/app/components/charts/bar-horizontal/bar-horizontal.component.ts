@@ -29,6 +29,8 @@ export class BarHorizontalComponent implements OnInit {
         display: true,
         gridLines: {
           display: false,
+          color: 'rgba(88, 45, 43, 0.5)',
+          lineWidth: 1
         },
         ticks: {
           padding: 20,
@@ -52,7 +54,21 @@ export class BarHorizontalComponent implements OnInit {
           return value + '%';
         }
       }
-    }
+    },
+     tooltips: {
+        titleFontFamily: 'Open Sans',
+        backgroundColor: 'rgba(0,0,0,0.4)',
+        titleFontColor: 'red',
+        caretSize: 5,
+        cornerRadius: 2,
+        xPadding: 10,
+        yPadding: 10
+     },
+     elements: {
+        line: {
+           tension: 0.2
+        }
+     },
   };
   public barChartLabels: Label[] = ['Ninet', 'About', 'Lorem', 'Ipsum', 'Rayo', 'dropd', 'Prec'];
   public barChartType: ChartType = 'horizontalBar';

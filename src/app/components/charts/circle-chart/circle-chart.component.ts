@@ -74,7 +74,7 @@ export class CircleChartComponent implements OnInit, AfterViewInit {
 
    ngAfterViewInit() {
 
-     // Degradado para el gráfico
+     // Degradado para el gráfico chart
       const ctx = this.doughnutChart.nativeElement.getContext('2d');
       const blueGradient = ctx.createLinearGradient(0, 0, 0, 300);
       blueGradient.addColorStop(1, 'rgba(11,138,229,0.15)');
