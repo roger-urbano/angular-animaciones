@@ -16,6 +16,7 @@ import { ChartsModule } from 'ng2-charts';
 import { BarHorizontalComponent } from './components/charts/bar-horizontal/bar-horizontal.component';
 import { BarVerticalComponent } from './components/charts/bar-vertical/bar-vertical.component';
 import { CircleChartComponent } from './components/charts/circle-chart/circle-chart.component';
+import { DoughnutChartComponent } from './components/charts/doughnut-chart/doughnut-chart.component';
 // import { ChartDataLabels }  from 'chartjs-plugin-datalabels';
 
 
@@ -29,6 +30,7 @@ import { CircleChartComponent } from './components/charts/circle-chart/circle-ch
     BarHorizontalComponent,
     BarVerticalComponent,
     CircleChartComponent,
+    DoughnutChartComponent,
   ],
   imports: [
     BrowserModule,
