@@ -9,7 +9,7 @@ import {trigger, style, transition, animate, state} from '@angular/animations';
 
 export class ModalAlertComponent implements OnInit {
     @Input() public isModalAlert: boolean;
-    @Output() public close: EventEmitter<boolean> = new EventEmitter();
+    @Output() public close  = new EventEmitter();
 
   constructor() { }
 
