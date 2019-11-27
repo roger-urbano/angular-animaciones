@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+
 
 @Component({
   selector: 'app-carousel',
@@ -37,7 +39,8 @@ export class CarouselComponent implements OnInit {
   };
 
 
-  constructor() { }
+  constructor(public breakpointObserver: BreakpointObserver) {}
+
 
   ngOnInit() {
     this.listImg = [
@@ -47,6 +50,16 @@ export class CarouselComponent implements OnInit {
       {titleImg: 'imagen4', srcImg: '../../../assets/images/mazda-4.jpeg'},
       {titleImg: 'imagen5', srcImg: '../../../assets/images/mazda-5.jpeg'},
     ];
+
+    this.breakpointObserver
+      .observe(['(min-width: 1024px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          console.log('Viewport es mayor 1024px');
+        } else {
+          console.log('Viewport es menor a 1024px');
+        }
+      });
   }
 
 }

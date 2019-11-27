@@ -1,0 +1,7 @@
+::ng-deep .owl-theme .owl-dots .owl-dot span {
+    background: orange;
+}
+
+::ng-deep .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: red;
+}

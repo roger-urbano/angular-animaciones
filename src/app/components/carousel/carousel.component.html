@@ -1,14 +1,13 @@
 <div style="text-align:center">
     <h1>
-      owl-carousel-o
+        owl-carousel-o
     </h1>
-      <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide *ngFor="let item of listImg, let i = index">
-          <figure>
-              <img [src]="item.srcImg" width="250" height="200">
-              <h5>{{ item.titleImg }}</h5>
-          </figure>
-        </ng-template>  
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let item of listImg, let i = index">
+            <figure>
+                <img [src]="item.srcImg" width="250" height="200">
+                <h5>{{ item.titleImg }}</h5>
+            </figure>
+        </ng-template>
     </owl-carousel-o>
     <div>Some tags after</div>
-  
